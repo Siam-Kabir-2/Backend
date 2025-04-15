@@ -1,0 +1,98 @@
+CREATE DATABASE college;
+
+CREATE DATABASE IF NOT EXISTS instagram;
+
+USE instagram;
+
+CREATE TABLE user(
+	id INT,
+    age INT,
+    name VARCHAR(30) NOT NULL,
+    email VARCHAR(30) UNIQUE,
+    followers INT DEFAULT 0,
+    followings INT DEFAULT 0,
+    CONSTRAINT CHECK (age>=13),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO user
+(id, name, email, followings)
+VALUES
+(8, "xyz", "xyz@gmail.com", 11);
+
+INSERT INTO user
+(id, age, name, email, followers,followings)
+VALUES
+(1, 14, "Siam", "siam@gmail.com", 106, 11),
+(2, 15, "kabir", "kabir@gmail.com", 196, 21),
+(3, 16, "shuvro", "shuvro@gmail.com", 226, 41),
+(4, 17, "nishat", "nishat@gmail.com", 333, 51);
+
+ALTER TABLE user
+ADD COLUMN city VARCHAR(25) DEFAULT "BANGLADESH";
+
+ALTER TABLE user
+DROP COLUMN age;
+
+ALTER TABLE instaUser
+RENAME TO user;
+
+ALTER TABLE user
+CHANGE COLUMN followers subs INT DEFAULT 0;
+
+ALTER TABLE user
+MODIFY subs INT DEFAULT 5;
+
+SELECT * FROM user;
+
+TRUNCATE TABLE user;
+
+INSERT INTO user
+(id, age, name, email, followers,followings)
+VALUES
+(5, 14, "tasnim", "tasnim@gmail.com", 1034, 111),
+(6, 16, "nur", "nur@gmail.com", 20, 999);
+
+DELETE FROM user
+WHERE age=15;
+
+UPDATE user
+SET followers=600
+WHERE age=16;
+
+
+
+SET SQL_SAFE_UPDATES=0;
+
+SELECT age,max(followers)
+FROM user
+GROUP BY age
+HAVING max(followers)>200
+ORDER BY age DESC;
+
+SELECT SUM(followers) FROM user;
+
+SELECT name,email,followers
+FROM user
+WHERE age>12
+ORDER BY followers DESC;
+
+CREATE TABLE post (
+	id INT PRIMARY KEY,
+    content VARCHAR(30),
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
+DROP TABLE post;
+
+INSERT INTO post
+(id, content, user_id)
+VALUES
+(1,"FUCK YOU",3),
+(2,"WHEN?",1),
+(3,"NOW!",3);
+
+SELECT * FROM post;
+SELECT name,id FROM user;
+
