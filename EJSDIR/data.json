@@ -1,0 +1,36 @@
+{
+  "ichigo": {
+    "name": "Kurosaki_Ichigo",
+    "followers": 13455,
+    "following": 50,
+    "posts": [
+      {
+        "image": "https://i.pinimg.com/736x/90/05/14/9005140e4e42fe8c18aa0b78d52196ee.jpg",
+        "likes": 1500,
+        "comments": 45
+      },
+      {
+        "image": "https://i.pinimg.com/736x/54/b5/ce/54b5cefeada6c2699af79da8137f9034.jpg",
+        "likes": 2100,
+        "comments": 70
+      }
+    ]
+  },
+  "aizen": {
+    "name": "Sosuke_Aizen",
+    "followers": 16000,
+    "following": 0,
+    "posts": [
+      {
+        "image": "https://i.pinimg.com/736x/5f/d2/55/5fd255b2cc801856ca609f0548eb4d08.jpg",
+        "likes": 1500,
+        "comments": 45
+      },
+      {
+        "image": "https://i.pinimg.com/736x/2c/d4/6e/2cd46e29bed1d3261de58f573df4820d.jpg",
+        "likes": 2100,
+        "comments": 70
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+body{
+    background-color: #27667B;
+}
+h1{
+    color :#DDEB9D;
+    text-align: center;
+}
+
+.post{
+    border: 2px solid #A0C878;
+    border-radius: 20px;
+    background-color:#143D60;
+    padding: 30px 30px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px #A0C878;
+    font-size: x-large;
+}
+.user{
+    color: #DDEB9D;
+    font-style: italic;
+    text-decoration: underline;
+}
+.content{
+    color: #DDEB9D;
+}
